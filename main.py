@@ -12,6 +12,13 @@ def print_summary():
     print(f"Average: {average:.2f}")
     print(f"Over 100: {big_amounts}")
 
+import transactions as tx
+def main():
+    tx.print_all(tx.transactions)
+    print(tx.total_by_type(tx.transactions))
+    print(tx.find_by_status(tx.transactions,"SUCCESS"))
+
 
 if __name__ == "__main__":
-    print_summary()
+    # print_summary()
+    main()
